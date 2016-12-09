@@ -1,0 +1,55 @@
+﻿Build started 12/9/2016 1:22:38 PM.
+     1>Project "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Reverb.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\SDKs\VST3 SDK" /I..\..\JuceLibraryCode /I"..\..\..\..\..\..\Program Files (x86)\JUCE\modules" /ZI /nologo /W4 /WX- /MP /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D _WINDOWS /D DEBUG /D _DEBUG /D JUCER_VS2013_78A5020=1 /D JUCE_APP_VERSION=1.0.0 /D JUCE_APP_VERSION_HEX=0x10000 /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Source\PluginProcessor.cpp
+         PluginProcessor.cpp
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(195): warning C4100: 'index' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(199): warning C4100: 'index' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(204): warning C4100: 'newName' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(204): warning C4100: 'index' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(211): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(209): warning C4100: 'samplesPerBlock' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(296): warning C4996: 'juce::AudioProcessor::getNumInputChannels': was declared deprecated
+                 c:\program files (x86)\juce\modules\juce_audio_processors\processors\juce_audioprocessor.h(934) : see declaration of 'juce::AudioProcessor::getNumInputChannels'
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(296): warning C4996: 'juce::AudioProcessor::getNumOutputChannels': was declared deprecated
+                 c:\program files (x86)\juce\modules\juce_audio_processors\processors\juce_audioprocessor.h(935) : see declaration of 'juce::AudioProcessor::getNumOutputChannels'
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(273): warning C4100: 'midiMessages' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(276): warning C4189: 'N' : local variable is initialized but not referenced
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(312): warning C4100: 'destData' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(319): warning C4100: 'sizeInBytes' : unreferenced formal parameter
+     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(319): warning C4100: 'data' : unreferenced formal parameter
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\\Reverb.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\\Reverb.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\Reverb.lib" /MACHINE:X86 /SAFESEH:NO /DLL Debug\resources.res
+         Debug\\CombFilter.obj
+         Debug\\PreDelay.obj
+         Debug\\Reverb.obj
+         "Debug\\AllPass Filter.obj"
+         Debug\\PluginProcessor.obj
+         Debug\\PluginEditor.obj
+         Debug\\juce_audio_basics.obj
+         Debug\\juce_audio_devices.obj
+         Debug\\juce_audio_formats.obj
+         Debug\\juce_audio_plugin_client_utils.obj
+         Debug\\juce_audio_plugin_client_VST2.obj
+         Debug\\juce_audio_plugin_client_VST3.obj
+         Debug\\juce_audio_processors.obj
+         Debug\\juce_audio_utils.obj
+         Debug\\juce_core.obj
+         Debug\\juce_cryptography.obj
+         Debug\\juce_data_structures.obj
+         Debug\\juce_events.obj
+         Debug\\juce_graphics.obj
+         Debug\\juce_gui_basics.obj
+         Debug\\juce_gui_extra.obj
+         Debug\\juce_opengl.obj
+         Debug\\juce_video.obj
+         Reverb.vcxproj -> C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\Reverb.dll
+       PostBuildEvent:
+         copy /Y "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\\Reverb.dll" "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\\Reverb.vst3"
+         :VCEnd
+                 1 file(s) copied.
+     1>Done Building Project "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Reverb.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.75

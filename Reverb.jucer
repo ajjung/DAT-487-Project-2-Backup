@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="D2LHMl" name="Reverb" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.yourcompany.Reverb" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="1" buildAU="1" buildAUv3="1" buildRTAS="0"
+              buildAAX="0" pluginName="Reverb" pluginDesc="Reverb" pluginManufacturer="yourcompany"
+              pluginManufacturerCode="Manu" pluginCode="D2lh" pluginChannelConfigs=""
+              pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
+              pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0" pluginAUExportPrefix="ReverbAU"
+              pluginRTASCategory="" aaxIdentifier="com.yourcompany.Reverb"
+              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="4.2.4">
+  <MAINGROUP id="YE7fzK" name="Reverb">
+    <GROUP id="{60FD4A4C-7BA9-1E61-9E69-65F5238E73AB}" name="Source">
+      <FILE id="vF0lKq" name="AllPass Filter.h" compile="0" resource="0"
+            file="Source/AllPass Filter.h"/>
+      <FILE id="K9fp8p" name="CombFilter.cpp" compile="1" resource="0" file="Source/CombFilter.cpp"/>
+      <FILE id="Xg3nUn" name="CombFilter.h" compile="0" resource="0" file="Source/CombFilter.h"/>
+      <FILE id="bvrCbp" name="PreDelay.cpp" compile="1" resource="0" file="Source/PreDelay.cpp"/>
+      <FILE id="h5FM3j" name="PreDelay.h" compile="0" resource="0" file="Source/PreDelay.h"/>
+      <FILE id="uBBVlK" name="Reverb.cpp" compile="1" resource="0" file="Source/Reverb.cpp"/>
+      <FILE id="yc2oD2" name="Reverb.h" compile="0" resource="0" file="Source/Reverb.h"/>
+      <FILE id="bsWNw2" name="AllPass Filter.cpp" compile="1" resource="0"
+            file="Source/AllPass Filter.cpp"/>
+      <FILE id="ofn7Np" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="szx4zX" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="tGBdF7" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="pXzaxX" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Reverb"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="Reverb"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../Program Files (x86)/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2013 targetFolder="Builds/VisualStudio2013">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="Reverb"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="3" targetName="Reverb"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../Program Files (x86)/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../Program Files (x86)/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2013>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>
