@@ -10,7 +10,7 @@
 
 #include "AllPass Filter.h"
 
-AllPassFilter::AllPassFilter()noexcept : bufferSize(0), bufferIndex(0)
+AllPassFilter::AllPassFilter() : bufferSize(0), bufferIndex(0)
 {
 }
 
@@ -26,12 +26,12 @@ void AllPassFilter::setSize(const int size)
 	clear();
 }
 
-void AllPassFilter::clear()noexcept
+void AllPassFilter::clear()
 {
 	buffer.clear((size_t)bufferSize);
 }
 
-float AllPassFilter::process(const float input)noexcept
+float AllPassFilter::process(const float input)
 {
 	const float bufferedValue = buffer[bufferIndex];
 	float temp = input + (bufferedValue * 0.5f);

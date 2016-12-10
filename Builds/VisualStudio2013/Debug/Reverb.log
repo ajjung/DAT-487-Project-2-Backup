@@ -1,25 +1,54 @@
-﻿Build started 12/9/2016 1:22:38 PM.
-     1>Project "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Reverb.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/9/2016 4:18:02 PM.
+     1>Project "C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Reverb.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\SDKs\VST3 SDK" /I..\..\JuceLibraryCode /I"..\..\..\..\..\..\Program Files (x86)\JUCE\modules" /ZI /nologo /W4 /WX- /MP /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D _WINDOWS /D DEBUG /D _DEBUG /D JUCER_VS2013_78A5020=1 /D JUCE_APP_VERSION=1.0.0 /D JUCE_APP_VERSION_HEX=0x10000 /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Source\PluginProcessor.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\SDKs\VST3 SDK" /I..\..\JuceLibraryCode /I"..\..\..\..\..\..\..\Program Files (x86)\JUCE\modules" /ZI /nologo /W4 /WX- /MP /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D _WINDOWS /D DEBUG /D _DEBUG /D JUCER_VS2013_78A5020=1 /D JUCE_APP_VERSION=1.0.0 /D JUCE_APP_VERSION_HEX=0x10000 /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\JuceLibraryCode\juce_audio_basics.cpp ..\..\JuceLibraryCode\juce_audio_devices.cpp ..\..\JuceLibraryCode\juce_audio_formats.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_VST2.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_VST3.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_utils.cpp ..\..\JuceLibraryCode\juce_audio_processors.cpp ..\..\JuceLibraryCode\juce_audio_utils.cpp ..\..\JuceLibraryCode\juce_core.cpp ..\..\JuceLibraryCode\juce_cryptography.cpp ..\..\JuceLibraryCode\juce_data_structures.cpp ..\..\JuceLibraryCode\juce_events.cpp ..\..\JuceLibraryCode\juce_graphics.cpp ..\..\JuceLibraryCode\juce_gui_basics.cpp ..\..\JuceLibraryCode\juce_gui_extra.cpp ..\..\JuceLibraryCode\juce_opengl.cpp ..\..\JuceLibraryCode\juce_video.cpp "..\..\Source\AllPass Filter.cpp" ..\..\Source\CombFilter.cpp ..\..\Source\PluginEditor.cpp ..\..\Source\PluginProcessor.cpp ..\..\Source\Reverb.cpp
+         juce_audio_basics.cpp
+         juce_audio_devices.cpp
+         juce_audio_formats.cpp
+         juce_audio_plugin_client_VST2.cpp
+         juce_audio_plugin_client_VST3.cpp
+         juce_audio_plugin_client_utils.cpp
+         juce_audio_processors.cpp
+         juce_audio_utils.cpp
+         juce_core.cpp
+         juce_cryptography.cpp
+         juce_data_structures.cpp
+         juce_events.cpp
+         juce_graphics.cpp
+         juce_gui_basics.cpp
+         juce_gui_extra.cpp
+         juce_opengl.cpp
+         juce_video.cpp
+         AllPass Filter.cpp
+         CombFilter.cpp
+         PluginEditor.cpp
          PluginProcessor.cpp
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(195): warning C4100: 'index' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(199): warning C4100: 'index' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(204): warning C4100: 'newName' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(204): warning C4100: 'index' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(211): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(209): warning C4100: 'samplesPerBlock' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(296): warning C4996: 'juce::AudioProcessor::getNumInputChannels': was declared deprecated
+         Reverb.cpp
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(203): warning C4100: 'index' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(207): warning C4100: 'index' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(212): warning C4100: 'newName' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(212): warning C4100: 'index' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(219): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(217): warning C4100: 'samplesPerBlock' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(303): warning C4996: 'juce::AudioProcessor::getNumInputChannels': was declared deprecated
                  c:\program files (x86)\juce\modules\juce_audio_processors\processors\juce_audioprocessor.h(934) : see declaration of 'juce::AudioProcessor::getNumInputChannels'
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(296): warning C4996: 'juce::AudioProcessor::getNumOutputChannels': was declared deprecated
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(303): warning C4996: 'juce::AudioProcessor::getNumOutputChannels': was declared deprecated
                  c:\program files (x86)\juce\modules\juce_audio_processors\processors\juce_audioprocessor.h(935) : see declaration of 'juce::AudioProcessor::getNumOutputChannels'
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(273): warning C4100: 'midiMessages' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(276): warning C4189: 'N' : local variable is initialized but not referenced
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(312): warning C4100: 'destData' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(319): warning C4100: 'sizeInBytes' : unreferenced formal parameter
-     1>c:\users\anthony\documents\reverb\source\pluginprocessor.cpp(319): warning C4100: 'data' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(281): warning C4100: 'midiMessages' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(284): warning C4189: 'N' : local variable is initialized but not referenced
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(319): warning C4100: 'destData' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(326): warning C4100: 'sizeInBytes' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(326): warning C4100: 'data' : unreferenced formal parameter
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\reverb.cpp(22): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\reverb.cpp(27): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\reverb.cpp(32): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\reverb.cpp(37): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(123): warning C4702: unreachable code
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(130): warning C4702: unreachable code
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(137): warning C4702: unreachable code
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(144): warning C4702: unreachable code
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\\Reverb.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\\Reverb.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\Reverb.lib" /MACHINE:X86 /SAFESEH:NO /DLL Debug\resources.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\\Reverb.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\\Reverb.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\Reverb.lib" /MACHINE:X86 /SAFESEH:NO /DLL Debug\resources.res
          Debug\\CombFilter.obj
          Debug\\PreDelay.obj
          Debug\\Reverb.obj
@@ -43,13 +72,14 @@
          Debug\\juce_gui_extra.obj
          Debug\\juce_opengl.obj
          Debug\\juce_video.obj
-         Reverb.vcxproj -> C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\Reverb.dll
+            Creating library C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\Reverb.lib and object C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\Reverb.exp
+         Reverb.vcxproj -> C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\Reverb.dll
        PostBuildEvent:
-         copy /Y "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\\Reverb.dll" "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Debug\\Reverb.vst3"
+         copy /Y "C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\\Reverb.dll" "C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\\Reverb.vst3"
          :VCEnd
                  1 file(s) copied.
-     1>Done Building Project "C:\Users\Anthony\Documents\Reverb\Builds\VisualStudio2013\Reverb.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Reverb.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.75
+Time Elapsed 00:00:13.98

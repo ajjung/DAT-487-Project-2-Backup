@@ -10,16 +10,16 @@
 
 #include "Reverb.h"
 
-Reverberation::Reverberation() : m_wetDryMix(0),
+Reverberation::Reverberation() : m_wet(0),
 m_damping(0),
 m_roomSize(0),
 m_width(0)
 {
 }
 
-void Reverberation::setWetDryMix(float wet)
+void Reverberation::setWet(float wet)
 {
-	m_wetDryMix = wet * .01;
+	m_wet = wet * .01;
 }
 
 void Reverberation::setDamp(float damp)
@@ -39,13 +39,10 @@ void Reverberation::setWidth(float width)
 
 void Reverberation::setParameters()
 {
-	const float wetScaleFactor = 3.0f;
-	const float dryScaleFactor = 2.0f;
-
-	const float wet = m_wetDryMix * wetScaleFactor;
-	dryGain.setValue((1.0f - m_wetDryMix) * dryScaleFactor);
-	wetGain1.setValue(0.5f * m_wetDryMix * (1.0f + m_width));
-	wetGain2.setValue(0.5f * m_wetDryMix * (1.0f - m_width));
+	const float wet = m_wet;
+	dryGain.setValue((1.0f - m_wet));
+	wetGain1.setValue(0.5f * wet * (1.0f + m_width));
+	wetGain2.setValue(0.5f * wet * (1.0f - m_width));
 
 	updateDamping();
 }
@@ -89,11 +86,12 @@ void Reverberation::reset()
 	}
 }
 
-void Reverberation::processStereo(float* const left, float* const right, const int numSamples)noexcept
+void Reverberation::processStereo(float* const left, float* const right, const int numSamples)
 {
+	setParameters();
 	for (int i = 0; i < numSamples; ++i)
 	{
-		const float input = (left[i] + right[i]);
+		const float input = (left[i] + right[i]) * 0.007f;
 		float outL = 0, outR = 0;
 
 		const float damp = damping.getNextValue();
@@ -120,7 +118,7 @@ void Reverberation::processStereo(float* const left, float* const right, const i
 	}
 }
 
-void Reverberation::updateDamping()noexcept
+void Reverberation::updateDamping()
 {
 	const float roomScaleFactor = 0.28f;
 	const float roomOffset = 0.7f;
@@ -129,7 +127,7 @@ void Reverberation::updateDamping()noexcept
 	setDamping(m_damping * dampScaleFactor, m_roomSize * roomScaleFactor + roomOffset);
 }
 
-void Reverberation::setDamping(const float dampingToUse, const float roomSizeToUse)noexcept
+void Reverberation::setDamping(const float dampingToUse, const float roomSizeToUse)
 {
 	damping.setValue(dampingToUse);
 	feedback.setValue(roomSizeToUse);

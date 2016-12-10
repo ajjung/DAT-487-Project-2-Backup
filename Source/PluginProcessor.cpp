@@ -21,9 +21,13 @@ m_knob5(0),
 m_knob6(0),
 m_knob7(0)
 {
-	m_fFeedback = 0;
-	m_fWetLevel = 0;
 	m_fGain = 0;
+	m_fDelayTime = 0;
+	m_fFeedback = 0;
+	m_fDamping = 0;
+	m_fRoomSize = 0;
+	m_fWidth = 0;
+	m_fWetLevel = 0;
 
 	m_fGain = m_knob1;
 	m_fDelayTime = m_knob2;
@@ -36,22 +40,22 @@ m_knob7(0)
 	PDelayL = PreDelay();
 	PDelayL.setMaxDelay(m_sampleRate, 0.500);
 	PDelayL.setDelayTime(m_sampleRate, m_fDelayTime);
-	PDelayL.setGainLevel(m_fGain);
 	PDelayL.setFeedback(m_fFeedback);
 	PDelayL.setPlayheads();
+	PDelayL.setGainLevel(m_fGain);
 
 	PDelayR = PreDelay();
 	PDelayR.setMaxDelay(m_sampleRate, 0.500);
 	PDelayR.setDelayTime(m_sampleRate, m_fDelayTime);
-	PDelayR.setGainLevel(m_fGain);
 	PDelayR.setFeedback(m_fFeedback);
 	PDelayR.setPlayheads();
-	
-	Reverb1.setSampleRate(m_sampleRate);
+	PDelayR.setGainLevel(m_fGain);
+
+	//Reverb1.setSampleRate(m_sampleRate);
 	Reverb1.setDamp(m_fDamping);
 	Reverb1.setRoomSize(m_fRoomSize);
 	Reverb1.setWidth(m_fWidth);
-	Reverb1.setWetDryMix(m_fWetLevel);
+	Reverb1.setWet(m_fWetLevel);
 	Reverb1.setParameters();
 }
 
@@ -91,7 +95,7 @@ void ReverbAudioProcessor::setParameter(int index, float newValue)
 	case knob1Param: m_knob1 = newValue;
 		m_fGain = m_knob1;
 
-		PDelayL.setGainLevel(m_fGain);
+		PDelayL.setGainLevel(m_fGain); 
 		PDelayR.setGainLevel(m_fGain); break;
 
 		//Delay Time Knob
@@ -116,24 +120,28 @@ void ReverbAudioProcessor::setParameter(int index, float newValue)
 		m_fDamping = m_knob4;
 
 		Reverb1.setDamp(m_fDamping); break;
+		Reverb1.setParameters();
 
 		//Roomsize Knob
 	case knob5Param: m_knob5 = newValue;
 		m_fRoomSize = m_knob5;
 
 		Reverb1.setRoomSize(m_fRoomSize); break;
+		Reverb1.setParameters();
 
 		//Width Knob    
 	case knob6Param: m_knob6 = newValue;
 		m_fWidth = m_knob6;
 
 		Reverb1.setWidth(m_fWidth); break;
+		Reverb1.setParameters();
 
 		//Wet Dry Mix Knob
 	case knob7Param: m_knob7 = newValue;
 		m_fWetLevel = m_knob7;
 
-		Reverb1.setWetDryMix(m_fWetLevel); break;
+		Reverb1.setWet(m_fWetLevel); break;
+		Reverb1.setParameters();
 
 	default: break;
 	}
@@ -219,23 +227,23 @@ void ReverbAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
 
 	PDelayL.setMaxDelay(m_sampleRate, 0.500);
 	PDelayL.setDelayTime(m_sampleRate, m_fDelayTime);
-	PDelayL.setGainLevel(m_fGain);
 	PDelayL.setFeedback(m_fFeedback);
 	PDelayL.prepareToPlay();
 	PDelayL.setPlayheads();
+	PDelayL.setGainLevel(m_fGain);
 
 	PDelayR.setMaxDelay(m_sampleRate, 0.500);
 	PDelayR.setDelayTime(m_sampleRate, m_fDelayTime);
-	PDelayR.setGainLevel(m_fGain);
 	PDelayR.setFeedback(m_fFeedback);
 	PDelayR.prepareToPlay();
 	PDelayR.setPlayheads();
+	PDelayR.setGainLevel(m_fGain);
 
 	Reverb1.setSampleRate(m_sampleRate);
 	Reverb1.setDamp(m_fDamping);
 	Reverb1.setRoomSize(m_fRoomSize);
 	Reverb1.setWidth(m_fWidth);
-	Reverb1.setWetDryMix(m_fWetLevel);
+	Reverb1.setWet(m_fWetLevel);
 	Reverb1.setParameters();
 }
 
@@ -281,8 +289,7 @@ void ReverbAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& 
 	for (int channel = 0; channel < totalNumInputChannels; ++channel){
 		float* channelData = buffer.getWritePointer(channel);
 
-
-		for (int n = 0; n<buffer.getNumSamples(); ++n){
+		for (int n = 0; n<bufsize; ++n){
 			if (channel == 0)
 				channelData[n] = PDelayL.process(channelData[n]);
 

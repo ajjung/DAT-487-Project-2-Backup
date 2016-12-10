@@ -19,6 +19,12 @@ PreDelay::~PreDelay()
 		delete[] m_pBuffer;
 }
 
+void PreDelay::setGainLevel(float gain)
+{
+	m_fGainlevel = gain * .01;
+}
+
+
 void PreDelay::setMaxDelay(float sampleRate, float seconds)
 {
 	//don't allow your delay time to be longer than the buffersize!
@@ -33,11 +39,6 @@ void PreDelay::setDelayTime(float sampleRate, float delayTime)
 void PreDelay::setFeedback(float feedBack)
 {
 	m_fFeedback = feedBack * .01;
-}
-
-void PreDelay::setGainLevel(float gain)
-{
-	m_fGainlevel = gain * .01;
 }
 
 // Run prepare to play and then cook the variables
@@ -106,7 +107,7 @@ float PreDelay::process(float audioInput)
 	}
 
 	//send back our wet/dry delay mix
-    return yn * input;
+    return yn + input;
 ;
 }
 

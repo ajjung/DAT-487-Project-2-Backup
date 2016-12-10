@@ -15,16 +15,14 @@
 class AllPassFilter
 {
 public:
-	AllPassFilter()noexcept;
+	AllPassFilter();
 	void setSize(const int size);
-	void clear()noexcept;
-	float process(const float input)noexcept;
+	void clear();
+	float process(const float input);
 
 private:
-	HeapBlock<float> buffer;
+	HeapBlock <float> buffer;
 	int bufferSize, bufferIndex;
-
-	JUCE_DECLARE_NON_COPYABLE(AllPassFilter)
 };
 
 

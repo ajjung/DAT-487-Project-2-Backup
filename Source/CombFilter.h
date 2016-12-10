@@ -15,17 +15,15 @@
 class CombFilter
 {
 public:
-	CombFilter()noexcept;
+	CombFilter();
 	void setSize(const int size);
-	void clear()noexcept;
-	float process(const float input, const float damp, const float feedbackLevel)noexcept;
+	void clear();
+	float process(const float input, const float damp, const float feedbackLevel);
 
 private:
 	HeapBlock<float> buffer;
 	int bufferSize, bufferIndex;
 	float last;
-
-	JUCE_DECLARE_NON_COPYABLE(CombFilter)
 };
 
 

@@ -16,7 +16,7 @@
 ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
-	setSize(700, 200);
+	setSize(660, 200);
 	addAndMakeVisible(knob1 = new Slider("Knob - 1"));
 	addAndMakeVisible(knob2 = new Slider("Knob - 2"));
 	addAndMakeVisible(knob3 = new Slider("Knob - 3"));
@@ -123,7 +123,7 @@ void ReverbAudioProcessorEditor::paint (Graphics& g)
 	g.drawSingleLineText("Damping", 295, 80); //this is knob 4
 	g.drawSingleLineText("Room Size", 393, 80); //this is knob 5
 	g.drawSingleLineText("Width", 493, 80); //this is knob 6
-	g.drawSingleLineText("Wet / Dry Mix", 593, 80); //this is knob 7
+	g.drawSingleLineText("Wet / Dry Mix", 560, 80); //this is knob 7
 }
 
 void ReverbAudioProcessorEditor::timerCallback()
@@ -161,10 +161,10 @@ void ReverbAudioProcessorEditor::sliderValueChanged(Slider* sliderThatWasChanged
 	}
 	else if (sliderThatWasChanged == knob6)
 	{
-		processor.setParameterNotifyingHost(ReverbAudioProcessor::knob6Param, (float)knob4->getValue());
+		processor.setParameterNotifyingHost(ReverbAudioProcessor::knob6Param, (float)knob6->getValue());
 	}
 	else if (sliderThatWasChanged == knob7)
 	{
-		processor.setParameterNotifyingHost(ReverbAudioProcessor::knob7Param, (float)knob5->getValue());
+		processor.setParameterNotifyingHost(ReverbAudioProcessor::knob7Param, (float)knob7->getValue());
 	}
 }

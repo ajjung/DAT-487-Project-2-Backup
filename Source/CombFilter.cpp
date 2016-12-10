@@ -10,7 +10,7 @@
 
 #include "CombFilter.h"
 
-CombFilter::CombFilter() noexcept: bufferSize(0), bufferIndex(0), last(0)
+CombFilter::CombFilter() : bufferSize(0), bufferIndex(0), last(0)
 {
 }
 
@@ -26,13 +26,13 @@ void CombFilter::setSize(const int size)
 	clear();
 }
 
-void CombFilter::clear()noexcept
+void CombFilter::clear()
 {
 	last = 0;
 	buffer.clear((size_t)bufferSize);
 }
 
-float CombFilter::process(const float input, const float damp, const float feedbackLevel)noexcept
+float CombFilter::process(const float input, const float damp, const float feedbackLevel)
 {
 	const float output = buffer[bufferIndex];
 	last = (output * (1.0f - damp)) + (last * damp);

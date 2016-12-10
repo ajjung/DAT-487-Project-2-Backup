@@ -95,11 +95,10 @@ private:
 	float m_fWidth;
 	float m_fWetLevel;
 
-	//for our interpolated delay time
 	PreDelay PDelayL;
 	PreDelay PDelayR;
 	Reverberation Reverb1;
-
+	//Reverb Reverb1;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ReverbAudioProcessor)
 };
