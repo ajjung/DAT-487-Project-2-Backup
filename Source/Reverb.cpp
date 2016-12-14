@@ -47,6 +47,7 @@ void Reverberation::setParameters()
 	updateDamping();
 }
 
+// Adjust coefficients calculated at 44.1khz to new sample rate
 void Reverberation::setSampleRate(const double sampleRate)
 {
 	static const short combTunings[] = { 1116, 1188, 1277, 1356, 1422, 1491, 1557, 1617 }; // (at 44100Hz)
@@ -74,6 +75,7 @@ void Reverberation::setSampleRate(const double sampleRate)
 	wetGain2.reset(sampleRate, smoothTime);
 }
 
+// Clear reverb buffer
 void Reverberation::reset()
 {
 	for (int j = 0; j < numChannels; ++j)
@@ -86,6 +88,7 @@ void Reverberation::reset()
 	}
 }
 
+// Process incoming blocks of data into comb and allpass filters
 void Reverberation::processStereo(float* const left, float* const right, const int numSamples)
 {
 	setParameters();
@@ -118,6 +121,7 @@ void Reverberation::processStereo(float* const left, float* const right, const i
 	}
 }
 
+// Update new parameters
 void Reverberation::updateDamping()
 {
 	const float roomScaleFactor = 0.28f;
@@ -127,6 +131,7 @@ void Reverberation::updateDamping()
 	setDamping(m_damping * dampScaleFactor, m_roomSize * roomScaleFactor + roomOffset);
 }
 
+// Update damping based on parameters
 void Reverberation::setDamping(const float dampingToUse, const float roomSizeToUse)
 {
 	damping.setValue(dampingToUse);

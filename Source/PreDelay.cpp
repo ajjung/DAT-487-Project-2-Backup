@@ -41,7 +41,7 @@ void PreDelay::setFeedback(float feedBack)
 	m_fFeedback = feedBack * .01;
 }
 
-// Run prepare to play and then cook the variables
+// Create buffers for storing delayed signal
 void PreDelay::prepareToPlay()
 {
 	//delete if it exists
@@ -75,6 +75,7 @@ void PreDelay::setPlayheads()
 	}
 }
 
+// Process delay sample by sample
 float PreDelay::process(float audioInput)
 {
 	//Assign Our Data

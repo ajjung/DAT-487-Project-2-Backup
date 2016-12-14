@@ -1,7 +1,7 @@
-﻿Build started 12/9/2016 4:18:02 PM.
+﻿Build started 12/13/2016 10:44:22 PM.
      1>Project "C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Reverb.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\SDKs\VST3 SDK" /I..\..\JuceLibraryCode /I"..\..\..\..\..\..\..\Program Files (x86)\JUCE\modules" /ZI /nologo /W4 /WX- /MP /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D _WINDOWS /D DEBUG /D _DEBUG /D JUCER_VS2013_78A5020=1 /D JUCE_APP_VERSION=1.0.0 /D JUCE_APP_VERSION_HEX=0x10000 /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\JuceLibraryCode\juce_audio_basics.cpp ..\..\JuceLibraryCode\juce_audio_devices.cpp ..\..\JuceLibraryCode\juce_audio_formats.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_VST2.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_VST3.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_utils.cpp ..\..\JuceLibraryCode\juce_audio_processors.cpp ..\..\JuceLibraryCode\juce_audio_utils.cpp ..\..\JuceLibraryCode\juce_core.cpp ..\..\JuceLibraryCode\juce_cryptography.cpp ..\..\JuceLibraryCode\juce_data_structures.cpp ..\..\JuceLibraryCode\juce_events.cpp ..\..\JuceLibraryCode\juce_graphics.cpp ..\..\JuceLibraryCode\juce_gui_basics.cpp ..\..\JuceLibraryCode\juce_gui_extra.cpp ..\..\JuceLibraryCode\juce_opengl.cpp ..\..\JuceLibraryCode\juce_video.cpp "..\..\Source\AllPass Filter.cpp" ..\..\Source\CombFilter.cpp ..\..\Source\PluginEditor.cpp ..\..\Source\PluginProcessor.cpp ..\..\Source\Reverb.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\SDKs\VST3 SDK" /I..\..\JuceLibraryCode /I"..\..\..\..\..\..\..\Program Files (x86)\JUCE\modules" /ZI /nologo /W4 /WX- /MP /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D WIN32 /D _WINDOWS /D DEBUG /D _DEBUG /D JUCER_VS2013_78A5020=1 /D JUCE_APP_VERSION=1.0.0 /D JUCE_APP_VERSION_HEX=0x10000 /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\JuceLibraryCode\juce_audio_basics.cpp ..\..\JuceLibraryCode\juce_audio_devices.cpp ..\..\JuceLibraryCode\juce_audio_formats.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_VST2.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_VST3.cpp ..\..\JuceLibraryCode\juce_audio_plugin_client_utils.cpp ..\..\JuceLibraryCode\juce_audio_processors.cpp ..\..\JuceLibraryCode\juce_audio_utils.cpp ..\..\JuceLibraryCode\juce_core.cpp ..\..\JuceLibraryCode\juce_cryptography.cpp ..\..\JuceLibraryCode\juce_data_structures.cpp ..\..\JuceLibraryCode\juce_events.cpp ..\..\JuceLibraryCode\juce_graphics.cpp ..\..\JuceLibraryCode\juce_gui_basics.cpp ..\..\JuceLibraryCode\juce_gui_extra.cpp ..\..\JuceLibraryCode\juce_opengl.cpp ..\..\JuceLibraryCode\juce_video.cpp "..\..\Source\AllPass Filter.cpp" ..\..\Source\CombFilter.cpp ..\..\Source\PluginEditor.cpp ..\..\Source\PluginProcessor.cpp ..\..\Source\PreDelay.cpp ..\..\Source\Reverb.cpp
          juce_audio_basics.cpp
          juce_audio_devices.cpp
          juce_audio_formats.cpp
@@ -23,6 +23,11 @@
          CombFilter.cpp
          PluginEditor.cpp
          PluginProcessor.cpp
+         PreDelay.cpp
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\predelay.cpp(24): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\predelay.cpp(31): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\predelay.cpp(36): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\predelay.cpp(41): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
          Reverb.cpp
      1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(203): warning C4100: 'index' : unreferenced formal parameter
      1>c:\users\anthony\documents\github\dat-487-project-2-backup\source\pluginprocessor.cpp(207): warning C4100: 'index' : unreferenced formal parameter
@@ -72,7 +77,6 @@
          Debug\\juce_gui_extra.obj
          Debug\\juce_opengl.obj
          Debug\\juce_video.obj
-            Creating library C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\Reverb.lib and object C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\Reverb.exp
          Reverb.vcxproj -> C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\Reverb.dll
        PostBuildEvent:
          copy /Y "C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\\Reverb.dll" "C:\Users\Anthony\Documents\GitHub\DAT-487-Project-2-Backup\Builds\VisualStudio2013\Debug\\Reverb.vst3"
@@ -82,4 +86,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:13.98
+Time Elapsed 00:00:16.40

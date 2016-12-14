@@ -14,6 +14,7 @@ AllPassFilter::AllPassFilter() : bufferSize(0), bufferIndex(0)
 {
 }
 
+// Allocate buffer based on input buffer size
 void AllPassFilter::setSize(const int size)
 {
 	if (size != bufferSize)
@@ -26,11 +27,13 @@ void AllPassFilter::setSize(const int size)
 	clear();
 }
 
+// Reset buffer
 void AllPassFilter::clear()
 {
 	buffer.clear((size_t)bufferSize);
 }
 
+// Process input buffer through all pass
 float AllPassFilter::process(const float input)
 {
 	const float bufferedValue = buffer[bufferIndex];

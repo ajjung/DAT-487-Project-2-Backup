@@ -14,6 +14,7 @@ CombFilter::CombFilter() : bufferSize(0), bufferIndex(0), last(0)
 {
 }
 
+// Set buffer size based on input buffer size
 void CombFilter::setSize(const int size)
 {
 	if (size != bufferSize)
@@ -26,12 +27,14 @@ void CombFilter::setSize(const int size)
 	clear();
 }
 
+// Reset buffer
 void CombFilter::clear()
 {
 	last = 0;
 	buffer.clear((size_t)bufferSize);
 }
 
+// Process Comb filter 
 float CombFilter::process(const float input, const float damp, const float feedbackLevel)
 {
 	const float output = buffer[bufferIndex];
